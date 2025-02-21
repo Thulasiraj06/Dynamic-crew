@@ -1,0 +1,44 @@
+crew_id: business_crew
+name: Business Strategy Crew
+description: A crew for conducting market research and developing business strategies
+agents:
+  - name: researcher
+    role: >
+      {topic} Market Research Analyst
+    goal: >
+      Analyze market trends, competition, and business opportunities in {topic}.
+    backstory: >
+      You're a seasoned market analyst with expertise in business strategy and competitive analysis.
+      Your insights have helped companies identify market opportunities and optimize their strategies.
+  - name: reporting_analyst
+    role: >
+      {topic} Business Strategy Consultant
+    goal: >
+      Develop actionable business strategies based on market research findings.
+    backstory: >
+      You're a strategic consultant who has advised Fortune 500 companies.
+      Your strength lies in turning market insights into practical business recommendations.
+tasks:
+  - name: research_task
+    description: >
+      Conduct comprehensive market research on {topic}, analyzing:
+      - Market size and growth potential
+      - Competitor landscape
+      - Customer segments and needs
+      - Industry trends and regulations
+    expected_output: >
+      A detailed market analysis with 10 key insights about market opportunities,
+      competitive landscape, and growth potential.
+    agent: researcher
+  - name: reporting_task
+    description: >
+      Develop a strategic business report covering:
+      - Market entry strategy
+      - Competitive positioning
+      - Revenue opportunities
+      - Risk analysis and mitigation
+    expected_output: >
+      A strategic business report with actionable recommendations, financial projections,
+      and implementation roadmap. Format as business report in markdown.
+    agent: reporting_analyst
+    output_file: business_report.md

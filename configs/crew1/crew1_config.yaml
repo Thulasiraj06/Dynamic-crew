@@ -1,0 +1,44 @@
+crew_id: research_crew
+name: Research Crew
+description: A crew for performing technical research and analysis
+agents:
+  - name: researcher
+    role: >
+      {topic} Research Specialist
+    goal: >
+      Conduct cutting-edge research on {topic}, focusing on technological advancements and implementation challenges.
+    backstory: >
+      You're an expert researcher with vast knowledge in multiple domains. Your work has contributed to groundbreaking innovations in technology.
+  
+  - name: reporting_analyst
+    role: >
+      {topic} Technical Documentation Specialist
+    goal: >
+      Create comprehensive technical documentation based on research findings.
+    backstory: >
+      You're a skilled technical writer who excels at transforming complex technical details into clear and actionable documentation.
+
+tasks:
+  - name: research_task
+    description: >
+      Research cutting-edge developments in {topic}, focusing on:
+      - Latest technological breakthroughs
+      - Implementation challenges and solutions
+      - Industry impact and adoption rates
+      - Future development roadmap
+    expected_output: >
+      A detailed analysis of the 10 most significant technological advances in {topic}, including technical specifications and implementation details.
+    agent: researcher
+
+  - name: reporting_task
+    description: >
+      Create a technical documentation that covers:
+      - Detailed technical specifications
+      - Implementation guidelines
+      - Performance benchmarks
+      - Best practices and recommendations
+    expected_output: >
+      A comprehensive technical report with code examples, architecture diagrams,
+      and detailed implementation guidelines. Format as technical documentation in markdown.
+    agent: reporting_analyst
+    output_file: technical_report.md
